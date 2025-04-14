@@ -1,4 +1,4 @@
-import Project_prop from "./project_prop";
+import Project_prop from "./Project_prop.jsx"
 import { bin2bite,blogscape,audi,expt,rtime} from "../constants/Constant";
 import AOS from "aos";
 import "aos/dist/aos.css";
