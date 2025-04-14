@@ -7,7 +7,6 @@ import Javascript from "../assets/Javascript.png";
 import Git from "../assets/Git.png";
 import TailwindCSS from "../assets/TailwindCSS.png";
 import react from "../assets/react.png";
-
 import Codebase from "../assets/Codebase.png"
 import Artive from "../assets/artive.png"
 import NodeJS from "../assets/nodejs.png"
