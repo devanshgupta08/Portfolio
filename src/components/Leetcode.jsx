@@ -56,7 +56,7 @@ function Leetcode({ theme }) {
                   theme === "light" ? "dark" : "light"
                 }&width=500&height=150&hide=background`}
                 className="absolute top-0 left-0 w-full h-full"
-                style={{ border: "none", objectFit: "cover" }}
+                style={{ border: "none", objectFit: "contain" }}
               ></iframe>
             </div>
           </div>
