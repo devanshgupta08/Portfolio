@@ -38,33 +38,21 @@ function Leetcode({ theme }) {
     return (
       <section
         id="leetcode"
-        className="EXPERIENCE p-5 mx-20 h-auto font-['Poppins'] max-sm:p-2 max-sm:mx-5"
+        className="EXPERIENCE min-h-[400px] p-5 font-['Poppins'] max-sm:p-2 mx-auto w-full overflow-hidden"
       >
-        <div className="WRAPPER mt-10" data-aos="zoom-out-down">
+        <div className="WRAPPER mt-10 w-full h-full" data-aos="zoom-out-down">
           <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-8 max-sm:text-4xl">
             LeetCode
           </h1>
-          <div
-            className="relative w-full flex justify-content-center"
-            style={{ paddingBottom: "56.25%" }}
-          >
-            {" "}
-            {/* 16:9 aspect ratio */}
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                overflow: "hidden",
-              }}
-            >
+
+          <div className="w-full flex justify-center">
+            <div className="w-full max-w-[500px] px-2">
               <iframe
                 src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
                   theme === "light" ? "dark" : "light"
                 }&width=500&height=150&hide=background`}
                 style={{
-                  width: "500px",
+                  width: "100%",
                   height: "150px",
                   border: "none",
                   display: "block",
