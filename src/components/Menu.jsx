@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Menu = () => {
-  const [theme, setTheme] = useState("light");
+const Menu = ({theme,setTheme}) => {
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.remove("dark");
@@ -28,6 +27,9 @@ const Menu = () => {
         </li>
         <li>
           <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#leetcode">Leetcode</a>
         </li>
         <li>
           <a href="#contact">Contact</a>

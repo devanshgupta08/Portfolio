@@ -4,6 +4,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Leetcode from "./components/Leetcode";
 import HashLoader from "react-spinners/HashLoader";
 
 import { useState, useEffect } from "react";
@@ -18,7 +19,7 @@ const override = {
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-
+  const [theme, setTheme] = useState("light");
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -40,11 +41,12 @@ const App = () => {
         </div>
       ) : (
         <div>
-          <Navbar></Navbar>
+          <Navbar theme = {theme} setTheme = {setTheme}></Navbar>
           <About></About>
           <Experience></Experience>
           <Education></Education>
           <Projects></Projects>
+          <Leetcode theme = {theme} ></Leetcode>
           <Contact></Contact>
         </div>
       )}

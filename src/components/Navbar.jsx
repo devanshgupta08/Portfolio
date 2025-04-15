@@ -3,11 +3,8 @@ import { HiSun, HiMoon } from "react-icons/hi";
 import { useState, useEffect } from "react";
 import Menu from "./Menu";
 
-const Navbar = () => {
+const Navbar = ({theme,setTheme}) => {
   const [nav, setNav] = useState(false);
-
-  const [theme, setTheme] = useState("light");
-
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.remove("dark");
@@ -45,6 +42,9 @@ const Navbar = () => {
             <a href="#projects" className="hover:text-cyan-500 ">
               Projects
             </a>
+            <a href="#leetcode" className="hover:text-cyan-500 ">
+              Leetcode
+            </a>
             <a href="#contact" className="hover:text-cyan-500 ">
               Contact
             </a>
@@ -61,7 +61,7 @@ const Navbar = () => {
             <CgMenuRightAlt className="hidden max-sm:block text-[#00040f] dark:text-[#e1e1e1] text-[32px]" />
           </button>
         </div>
-        {nav && <Menu />}
+        {nav && <Menu theme={theme} setTheme={setTheme}/>}
       </section>
     </>
   );
