@@ -48,7 +48,7 @@ function Leetcode({ theme }) {
           <iframe
             src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
               theme === "light" ? "dark" : "light"
-            }&width=350&height=100
+            }&width=500&height=150
             }&hide=background`}
             className="absolute top-0 left-0 w-full h-full"
             style={{ border: "none"}}
