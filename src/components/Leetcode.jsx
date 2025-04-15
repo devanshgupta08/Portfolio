@@ -37,26 +37,31 @@ function Leetcode({ theme }) {
   if (screenWidth <= 1185) {
     return (
       <section
-      id="leetcode"
-      className="EXPERIENCE p-5 mx-20 h-auto font-['Poppins'] max-sm:p-2 max-sm:mx-5"
-    >
-      <div className="WRAPPER mt-10" data-aos="zoom-out-down">
-        <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-8 max-sm:text-4xl">
-          LeetCode
-        </h1>
-        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}> {/* 16:9 aspect ratio */}
-          <iframe
-            src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
-              theme === "light" ? "dark" : "light"
-            }&width=500&height=150
-            }&hide=background`}
-            className="absolute top-0 left-0 w-full h-full"
-            style={{ border: "none"}}
-          ></iframe>
+        id="leetcode"
+        className="EXPERIENCE p-5 mx-20 h-auto font-['Poppins'] max-sm:p-2 max-sm:mx-5"
+      >
+        <div className="WRAPPER mt-10" data-aos="zoom-out-down">
+          <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-8 max-sm:text-4xl">
+            LeetCode
+          </h1>
+          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+            {" "}
+            {/* 16:9 aspect ratio */}
+            <div
+              className="relative w-full"
+              style={{ paddingBottom: "56.25%", overflow: "hidden" }}
+            >
+              <iframe
+                src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
+                  theme === "light" ? "dark" : "light"
+                }&width=500&height=150&hide=background`}
+                className="absolute top-0 left-0 w-full h-full"
+                style={{ border: "none", objectFit: "cover" }}
+              ></iframe>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-    
+      </section>
     );
   }
 
