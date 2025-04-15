@@ -3,8 +3,9 @@ import { HiSun, HiMoon } from "react-icons/hi";
 import { useState, useEffect } from "react";
 import Menu from "./Menu";
 
-const Navbar = ({theme,setTheme}) => {
+const Navbar = ({ theme, setTheme }) => {
   const [nav, setNav] = useState(false);
+
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.remove("dark");
@@ -17,10 +18,15 @@ const Navbar = ({theme,setTheme}) => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const toggleNav = () => {
+    setNav((prev) => !prev);
+  };
+
   return (
     <>
       <section className="NAVBAR p-5 mx-20 mt-5 font-['Poppins'] max-sm:p-2 max-sm:mx-5 max-sm:max-h-[48px]">
-        <div className="NAVBAR flex  justify-between capitalize">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
           <div className="LOGO">
             <a
               href="#"
@@ -29,23 +35,25 @@ const Navbar = ({theme,setTheme}) => {
               {"<Devansh />"}
             </a>
           </div>
-          <div className="NAVLINKS text-[20px] translate-x-[80px] max-sm:hidden flex gap-12 text-[#00040f] dark:text-[#e1e1e1] ">
-            <a href="#about" className=" hover:text-cyan-500">
+
+          {/* Desktop Nav Links */}
+          <div className="hidden lg:flex text-[20px] gap-12 text-[#00040f] dark:text-[#e1e1e1]">
+            <a href="#about" className="hover:text-cyan-500">
               Home
             </a>
             <a href="#experience" className="hover:text-cyan-500">
               Experience
             </a>
-            <a href="#education" className="hover:text-cyan-500 ">
+            <a href="#education" className="hover:text-cyan-500">
               Education
             </a>
-            <a href="#projects" className="hover:text-cyan-500 ">
+            <a href="#projects" className="hover:text-cyan-500">
               Projects
             </a>
-            <a href="#leetcode" className="hover:text-cyan-500 ">
+            <a href="#leetcode" className="hover:text-cyan-500">
               Leetcode
             </a>
-            <a href="#contact" className="hover:text-cyan-500 ">
+            <a href="#contact" className="hover:text-cyan-500">
               Contact
             </a>
             <button onClick={handleTheme}>
@@ -57,13 +65,23 @@ const Navbar = ({theme,setTheme}) => {
             </button>
           </div>
 
-          <button onClick={() => setNav(!nav)}>
-            <CgMenuRightAlt className="hidden max-sm:block text-[#00040f] dark:text-[#e1e1e1] text-[32px]" />
+          {/* Hamburger Menu Icon */}
+          <button onClick={toggleNav} className="block lg:hidden">
+            <CgMenuRightAlt className="text-[#00040f] dark:text-[#e1e1e1] text-[32px]" />
           </button>
         </div>
-        {nav && <Menu theme={theme} setTheme={setTheme}/>}
+
+        {/* Mobile Menu */}
+        {nav && (
+          <Menu
+            theme={theme}
+            setTheme={setTheme}
+            closeMenu={() => setNav(false)}
+          />
+        )}
       </section>
     </>
   );
 };
+
 export default Navbar;
