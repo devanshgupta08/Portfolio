@@ -41,7 +41,7 @@ function Leetcode({ theme }) {
       className="EXPERIENCE p-5 mx-20 h-auto font-['Poppins'] max-sm:p-2 max-sm:mx-5"
     >
       <div className="WRAPPER mt-10" data-aos="zoom-out-down">
-        <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-5 max-sm:text-4xl">
+        <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-8 max-sm:text-4xl">
           LeetCode
         </h1>
         <div className="relative w-full" style={{ paddingBottom: '56.25%' }}> {/* 16:9 aspect ratio */}
@@ -51,7 +51,8 @@ function Leetcode({ theme }) {
             }&width=500&height=150
             }&hide=background`}
             className="absolute top-0 left-0 w-full h-full"
-            style={{ border: "none" }}
+            style={{ border: "none", overflow: 'hidden' }}
+            scrolling="no"
           ></iframe>
         </div>
       </div>
