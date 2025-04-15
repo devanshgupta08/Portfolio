@@ -38,7 +38,7 @@ function Leetcode({ theme }) {
     return (
       <section
         id="leetcode"
-        className="EXPERIENCE min-h-[400px] p-5 font-['Poppins'] max-sm:p-2 mx-auto w-full overflow-hidden"
+        className="EXPERIENCE min-h-[4000px] p-5 font-['Poppins'] max-sm:p-2 mx-auto w-full overflow-hidden"
       >
         <div className="WRAPPER mt-10 w-full h-full" data-aos="zoom-out-down">
           <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-8 max-sm:text-4xl">
