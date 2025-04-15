@@ -52,7 +52,6 @@ function Leetcode({ theme }) {
             }&hide=background`}
             className="absolute top-0 left-0 w-full h-full"
             style={{ border: "none"}}
-            scrolling="no"
           ></iframe>
         </div>
       </div>
