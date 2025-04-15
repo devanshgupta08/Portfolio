@@ -44,19 +44,31 @@ function Leetcode({ theme }) {
           <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-8 max-sm:text-4xl">
             LeetCode
           </h1>
-          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+          <div
+            className="relative w-full flex justify-content-center"
+            style={{ paddingBottom: "56.25%" }}
+          >
             {" "}
             {/* 16:9 aspect ratio */}
             <div
-              className="relative w-full"
-              style={{ paddingBottom: "56.25%", overflow: "hidden" }}
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden",
+              }}
             >
               <iframe
                 src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
                   theme === "light" ? "dark" : "light"
                 }&width=500&height=150&hide=background`}
-                className="absolute top-0 left-0 w-full h-full"
-                style={{ border: "none", objectFit: "contain" }}
+                style={{
+                  width: "500px",
+                  height: "150px",
+                  border: "none",
+                  display: "block",
+                }}
               ></iframe>
             </div>
           </div>
