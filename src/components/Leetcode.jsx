@@ -34,13 +34,52 @@ function Leetcode({ theme }) {
   const heatmapSize = getHeatmapSize();
 
   // Conditional rendering for screen size below 1185px
+  if (screenWidth <= 560) {
+    return (
+      <section
+        id="leetcode"
+        className="EXPERIENCE min-h-[600px] p-5 font-['Poppins'] max-sm:p-2 mx-auto w-full overflow-hidden"
+      >
+        <div
+          className="WRAPPER min-h-[399px] mt-10 w-full h-full"
+          data-aos="zoom-out-down"
+        >
+          <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-8 max-sm:text-4xl">
+            LeetCode
+          </h1>
+
+          <div className="w-full min-h-[398px] flex justify-center">
+  <div className="w-full min-h-[398px] max-w-[600px] px-2 overflow-hidden">
+    <div style={{ transform: "scale(1)" }}>
+      <iframe
+        src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
+          theme === "light" ? "dark" : "light"
+        }&width=500&height=200&hide=background`}
+        style={{
+          width: "100%",
+          height: "150px",
+          border: "none",
+          display: "block",
+        }}
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </section>
+    );
+  }
   if (screenWidth <= 1185) {
     return (
       <section
         id="leetcode"
         className="EXPERIENCE min-h-[600px] p-5 font-['Poppins'] max-sm:p-2 mx-auto w-full overflow-hidden"
       >
-        <div className="WRAPPER min-h-[399px] mt-10 w-full h-full" data-aos="zoom-out-down">
+        <div
+          className="WRAPPER min-h-[399px] mt-10 w-full h-full"
+          data-aos="zoom-out-down"
+        >
           <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-8 max-sm:text-4xl">
             LeetCode
           </h1>
