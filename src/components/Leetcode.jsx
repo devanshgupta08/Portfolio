@@ -53,10 +53,10 @@ function Leetcode({ theme }) {
       <img
         src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
           theme === "light" ? "dark" : "light"
-        }&width=500&height=200&hide=background`}
+        }&width=650&height=300`}
         style={{
           width: "100%",
-          height: "150px",
+          height: "200px",
           border: "none",
           display: "block",
           transform: "scale(1)" 
