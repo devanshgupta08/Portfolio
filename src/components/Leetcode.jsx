@@ -32,8 +32,7 @@ function Leetcode({ theme }) {
   const solvedSize = getSolvedSize();
   const contestSize = getContestSize();
   const heatmapSize = getHeatmapSize();
-
-  // Conditional rendering for screen size below 1185px
+// Conditional rendering for screen size below 1185px
   if (screenWidth <= 560) {
     return (
       <section
@@ -51,7 +50,7 @@ function Leetcode({ theme }) {
           <div className="w-full min-h-[398px] flex justify-center">
   <div className="w-full min-h-[398px] max-w-[600px] px-2 overflow-hidden">
     <div >
-      <iframe
+      <img
         src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
           theme === "light" ? "dark" : "light"
         }&width=500&height=200&hide=background`}
@@ -62,7 +61,7 @@ function Leetcode({ theme }) {
           display: "block",
           transform: "scale(0.5)" 
         }}
-      ></iframe>
+      ></img>
     </div>
   </div>
 </div>
@@ -71,7 +70,7 @@ function Leetcode({ theme }) {
       </section>
     );
   }
-  if (screenWidth <= 1185) {
+ if (screenWidth <= 1185) {
     return (
       <section
         id="leetcode"
