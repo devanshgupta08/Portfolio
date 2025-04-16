@@ -61,6 +61,7 @@ function Leetcode({ theme }) {
           display: "block",
           transform: "scale(1)" 
         }}
+        alt="LeetCode Card"
       ></img>
     </div>
   </div>
