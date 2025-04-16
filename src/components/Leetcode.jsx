@@ -50,7 +50,7 @@ function Leetcode({ theme }) {
 
           <div className="w-full min-h-[398px] flex justify-center">
   <div className="w-full min-h-[398px] max-w-[600px] px-2 overflow-hidden">
-    <div style={{ transform: "scale(0.5)" }}>
+    <div >
       <iframe
         src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
           theme === "light" ? "dark" : "light"
@@ -60,6 +60,7 @@ function Leetcode({ theme }) {
           height: "150px",
           border: "none",
           display: "block",
+          transform: "scale(0.5)" 
         }}
       ></iframe>
     </div>
