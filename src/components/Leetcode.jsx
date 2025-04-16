@@ -37,18 +37,18 @@ function Leetcode({ theme }) {
     return (
       <section
         id="leetcode"
-        className="EXPERIENCE min-h-[600px] p-5 font-['Poppins'] max-sm:p-2 mx-auto w-full overflow-hidden"
+        className="EXPERIENCE p-5 font-['Poppins'] max-sm:p-2 mx-auto w-full overflow-hidden"
       >
         <div
-          className="WRAPPER min-h-[399px] mt-10 w-full h-full"
+          className="WRAPPER mt-14 w-full h-full"
           data-aos="zoom-out-down"
         >
           <h1 className="text-[#00040f] dark:text-slate-300 text-center font-extrabold text-5xl mb-8 max-sm:text-4xl">
             LeetCode
           </h1>
 
-          <div className="w-full min-h-[398px] flex justify-center">
-  <div className="w-full min-h-[398px] max-w-[600px] px-2 overflow-hidden">
+          <div className="w-full flex justify-center">
+  <div className="w-full  px-2 overflow-hidden">
     <div >
       <img
         src={`https://leetcard.jacoblin.cool/devansh00gupta?ext=contest&theme=${
@@ -59,7 +59,7 @@ function Leetcode({ theme }) {
           height: "150px",
           border: "none",
           display: "block",
-          transform: "scale(0.5)" 
+          transform: "scale(1)" 
         }}
       ></img>
     </div>
